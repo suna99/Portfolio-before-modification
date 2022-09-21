@@ -1,3 +1,1 @@
-# portfolio
-
-https://suna99.github.io/portfolio/
+수정 전 portfolio
