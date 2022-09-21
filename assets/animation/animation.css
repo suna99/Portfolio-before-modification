@@ -60,19 +60,11 @@
 }
 
 @keyframes web-animation {
-  0% {
+  0%,100% {
     background-position: center top;
   }
-  80% {
+  50% {
     background-position: center bottom;
-  }
-
-  85% {
-    background-position: center bottom;
-  }
-
-  100% {
-    background-position: center top;
   }
 }
 

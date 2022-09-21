@@ -1,12 +1,3 @@
-//const section1 = document.querySelector("#section1");
-const section2 = document.querySelector("#section2");
-const section3 = document.querySelector("#section3");
-const section4 = document.querySelector("#section4");
-const section5 = document.querySelector("#section5");
-const section6 = document.querySelector("#section6");
-const section7 = document.querySelector("#section7");
-const section8 = document.querySelector("#section8");
-
 //버튼 클릭
 document.querySelectorAll(".portfolio_list ul li a").forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -55,6 +46,7 @@ function scroll() {
     ).style.animation = "none";
   }
 
+  // (header, section1) z-index 변화
   if (scrollTop < 8100 && scrollTop > 2600) {
     document.querySelector(".header").style.display = "flex";
     document.querySelector(".sec1").style.zIndex = "9001";
@@ -63,43 +55,25 @@ function scroll() {
     document.querySelector(".sec1").style.zIndex = "1000";
   }
 
+  // (section4) z-index 변화 : 버튼 활성
   if (scrollTop < 24000 && scrollTop > 19900) {
     document.querySelector(".section4").style.zIndex = "9001";
   } else {
     document.querySelector(".section4").style.zIndex = "4000";
   }
 
-  if (scrollTop < 24400 && scrollTop >= 13500) {
+  // nav.change
+  if (scrollTop < 24400 && scrollTop > 13500) {
     document.querySelector("#nav").classList.add("change");
   } else {
     document.querySelector("#nav").classList.remove("change");
   }
 
-  // if (scrollTop >= 35500) {
-  //   document.querySelector("#nav").classList.add("change");
-  // } else {
-  //   document.querySelector("#nav").classList.remove("change");
-  // }
-
-  // if (scrollTop > 17900 && scrollTop < 26000) {
-  //   document.querySelector(".sec5_1").style.display = 'block';
-  // } else {
-  //   document.querySelector(".sec5_1").style.display = 'none';
-  // }
-
-  // document.querySelector("body").addEventListener('mousemove', eyeball);
-
-  // function eyeball() {
-  //   let eye = document.querySelectorAll(".eye");
-  //   eye.forEach(eye => {
-  //     let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
-  //     let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
-
-  //     let radian = Math.atan2(event.pageX - x, event.pageY - y);
-  //     let rot = (radian * (180 / Math.PI) * -1) + 270;
-  //     eye.style.transform = "rotate(" + rot + "deg)";
-  //   })
-  // }
+  if (scrollTop < 40000 && scrollTop >= 37500) {
+    document.querySelector("#nav").classList.add("change");
+  } else {
+    document.querySelector("#nav").classList.remove("change");
+  }
 
   requestAnimationFrame(scroll);
 }
